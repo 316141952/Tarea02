@@ -1,0 +1,22 @@
+\BOOKMARK [0][-]{chapter.1}{Conceptos}{}% 1
+\BOOKMARK [1][-]{section.1.1}{TDA}{chapter.1}% 2
+\BOOKMARK [1][-]{section.1.2}{Interfaz}{chapter.1}% 3
+\BOOKMARK [1][-]{section.1.3}{Clase abstracta}{chapter.1}% 4
+\BOOKMARK [1][-]{section.1.4}{Herencia}{chapter.1}% 5
+\BOOKMARK [1][-]{section.1.5}{Superclase}{chapter.1}% 6
+\BOOKMARK [1][-]{section.1.6}{Encapsulamiento}{chapter.1}% 7
+\BOOKMARK [1][-]{section.1.7}{Visibilidad}{chapter.1}% 8
+\BOOKMARK [1][-]{section.1.8}{Estructura de datos }{chapter.1}% 9
+\BOOKMARK [0][-]{chapter.2}{Errores}{}% 10
+\BOOKMARK [1][-]{section.2.1}{Errores de Sintaxis}{chapter.2}% 11
+\BOOKMARK [1][-]{section.2.2}{Errores de Ejecuci\363n}{chapter.2}% 12
+\BOOKMARK [1][-]{section.2.3}{Errores L\363gicos}{chapter.2}% 13
+\BOOKMARK [0][-]{chapter.3}{Excepciones}{}% 14
+\BOOKMARK [1][-]{section.3.1}{\277Qu\351 es una excepci\363n?}{chapter.3}% 15
+\BOOKMARK [1][-]{section.3.2}{Jerarqu\355a}{chapter.3}% 16
+\BOOKMARK [1][-]{section.3.3}{Excepciones definidas por el programador}{chapter.3}% 17
+\BOOKMARK [0][-]{chapter.4}{Objeto persistente}{}% 18
+\BOOKMARK [0][-]{chapter.5}{Entornos para ejecutar c\363digo}{}% 19
+\BOOKMARK [1][-]{section.5.1}{Netbeans}{chapter.5}% 20
+\BOOKMARK [1][-]{section.5.2}{Jupyter}{chapter.5}% 21
+\BOOKMARK [1][-]{section.5.3}{Emacs}{chapter.5}% 22

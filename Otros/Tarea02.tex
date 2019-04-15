@@ -1,0 +1,222 @@
+\documentclass{book} %para darle formato de libro
+\usepackage{graphicx} %pa' ponerle imágenes
+\usepackage[spanish]{babel} %para que las cositas predeterminadas aparezcan en español
+\usepackage{hyperref} %para ponerle links
+%\usepackage{biblatex} % para ponerle bibliografía 
+\usepackage[utf8]{inputenc} %pa' poner acentitos 
+\graphicspath{{/home/Valeria/Tarea02}}
+
+\title{\Huge Tarea 2\\Programación\\Universidad Nacional Autónoma de México.\\Facultad de Ciencias.\\}
+\author{\huge Valeria Ortiz Cervantes}
+\date{\LARGE 14 de abril del 2019}
+
+\begin{document}
+\maketitle
+\newpage
+\tableofcontents
+
+\chapter{\large Conceptos}
+\section{TDA}
+Un Tipo de Dato Abstracto (TDA) es un conjunto de datos u objetos al cual se le asocian operaciones para facilitar su programación. Se compone de:
+\begin{enumerate}
+	\item Estructura de datos: es la estructura de programación que se selecciona para representar las características de la entidad modelada.
+	\item Funciones de abstracción: son funciones que permiten hacer uso de la estructura de datos, y que esconden los detalles de dicha estructura, permitiendo un mayor nivel de abstracción.
+\end{enumerate}
+Ejemplo: \\Una lista [1,2,3,4,5]
+\section{Interfaz}
+Una interfaz es un conjunto de métodos abstractos y de constantes cuya funcionalidad es la de determinar el funcionamiento de una clase, es decir, funciona como un molde o como una plantilla. Al ser sus métodos abstractos estos no tienen funcionalidad alguna, sólo se definen su tipo, argumento y tipo de retorno. \\Ejemplo: 
+\begin{verbatim}
+	public interface MatematicaVectorial  {
+		public static double pi = 3.14159;
+		public double[] sumar(int[][]vectores);
+	}
+\end{verbatim}
+\section{Clase abstracta}
+Una clase que declara la existencia de métodos pero no la implementación de dichos métodos se considera una clase abstracta; puede contener métodos no abstractos pero al menos uno de los métodos debe ser declarado abstracto.\\Ejemplo:
+\begin{verbatim}
+	public abstract class Figura {
+		public int area;
+		abstract public void  calcularArea();	
+	}
+\end{verbatim}
+\section{Herencia}
+Es un mecanismo que nos permite definir una clase a partir de la definición de otra ya existente, nos permite compartir automáticamente métodos y datos entre clases, subclases y objetos. \\ Ejemplo:
+\begin{verbatim}
+	public class Auto {
+		public void arrancar() {
+		bla bla bla 
+		}
+	}
+	
+	public class Toyota extends Auto {
+		public void arrancar() {
+			super.arrancar();
+		}
+	}
+\end{verbatim}
+\section{Superclase}
+El concepto de herencia conduce a una estructura jerárquica de clases, dentro de la cual cada clase tiene sólo una clase padre. La clase padre de cualquier clase es conocida como su superclase.\\
+Utilizando el ejemplo anterior la superclase de Toyota sería Auto.
+\section{Encapsulamiento}
+Es un mecanismo que consiste en organizar datos y métodos de una estructura, conciliando el modo en que el objeto se implementa, es decir, evitando el acceso a datos por cualquier otro medio distinto a los especificados. Por lo tanto, el encapsulamiento garantiza la integridad de los datos que contiene un objeto. \\Ejemplo:
+\begin{verbatim}
+	public class MiClase{
+		private int tipo;
+		public void setTipo(int t) {
+			tipo = t;
+		}
+		public int getTipo() {
+			return tipo;
+		}
+	}
+\end{verbatim}
+\section{Visibilidad}
+La visibilidad es la manera en que se manejan los atributos y métodos de una clase, estos pueden ser tres:
+\begin{enumerate}
+	\item Público: este indica que está visible para todas las clases y puede ser utilizado por otras clases. 
+	\item Protegido: que solo puede ser usado por la clase que lo contenga o una subclase de esta. 
+	\item Privado: este es el más fuerte ya que solo la clase principal puede utilizar el atributo o método.
+\end{enumerate}
+Ejemplo:
+\begin{verbatim}
+	public class Puerta {
+		protected int alto; 
+		private int color;
+		public void Abrir();
+	}
+\end{verbatim}
+\section{Estructura de datos }
+s una forma particular de organizar datos para que puedan ser utilizados por la computadora de manera más eficiente, consiste en una colección de datos que se caracteriza por su organización y las operaciones que se definen en ella. \\
+Ejemplo: \\
+Una cadena: “holi”
+
+\chapter{Errores}
+\section{Errores de Sintaxis}
+Cuando no se puede ejecutar el programa porque alguna instrucción está mal redactada.\\Ejemplos (en Python):
+\begin{enumerate}
+	\item \begin{verbatim}
+		prrint “holi”
+	\end{verbatim}
+	No va a imprimir nada pues el print tiene una r de más.
+	\item \begin{verbatim}
+		r == 1
+		print r
+	\end{verbatim}
+	No va a regresar nada pues se hizo una comparación en vez de una asignación
+	\item \begin{verbatim}
+		 s = 5 ++ 7
+		print s
+	\end{verbatim} Va a marcar un error pues hay un + de más. 
+	\item \begin{verbatim}
+		def saludo (x)
+			if x == True :
+			return “holi” 
+	\end{verbatim}
+	No va a regresar nada pues después de definir la función no están los dos puntitos.
+\end{enumerate}
+\section{Errores de Ejecución}
+Se presenta cuando el ordenador no puede ejecutar alguna instrucción de forma correcta. \\Ejemplos: 
+\begin{enumerate}
+	\item \begin{verbatim}
+		r = 1/(1/2)
+		print r 
+	\end{verbatim} Lo que se espera es que devuelva 0.5, pero solo regresa 0 pues como los numeritos son de tipo entero lo que devuelven también será de tipo entero. 
+	\item \begin{verbatim}
+		Edad = float(input(“Ingresa tu edad: “))
+	\end{verbatim} Aquí el usuario ingresa su edad y el programa lo convierte en un flotante, todo esto suponiendo que ingresa un número, pues si ingresa por ejemplo una letra el programa marcará un error de ejecución.
+\end{enumerate}
+\section{Errores Lógicos}
+Estos son los más difíciles de detectar pues se presentan cuando no existe ningún error de sintaxis o de ejecución, pero aun así el programa no puede ejecutar el código correctamente. De manera que, un error de lógica se produce cuando los resultados obtenidos no son los esperados.\\Ejemplos:
+\begin{enumerate}
+	\item \begin{verbatim}
+		def AreaCuadrado (lados) :
+		a = lado*lado*lado
+		print a 
+	\end{verbatim}
+	El programa se ejecutará sin problema, pero si por ejemplo introducimos 10 como la longitud de los lados del cuadrado nos devolverá 1000 como área, pues definimos a = lado*lado*lado, cuando debió haber sido a = lado*lado
+	\item \begin{verbatim}
+		def Impar (numerillo) :
+		if numerillo%2 == 1 :
+		return False
+		else :
+		return True
+	\end{verbatim}
+	Aquí no habrá ningún problema al ejecutar, sin embargo pones un 10 como entrada te dirá que sí es impar cuando no es así, esto se debe a que la comparación debe ir de la siguiente manera: if numerillo$\%$2 == 0.
+	\item \begin{verbatim}
+		def AreaTriangulo (base, altura) :
+		a = (base*altura)/3
+		print a
+	\end{verbatim}
+	Al igual que con los ejemplos anteriores no habrá ningún problema al ejecutar pero no devolverá lo que se espera, pues a debió definirse como a = (base*altura)/2
+\end{enumerate}
+\chapter{Excepciones}
+\section{¿Qué es una excepción?}
+Es un mecanismo de control de errores en tiempo de ejecución, una forma de hacer que la ejecución del programa continue cuando se produce un error.
+\section{Jerarquía}
+Se define una excepción como un objeto que es una instancia de la clase Throwable, o alguna de sus subclases. De Throwable heredan las clases Error y Exception:
+\begin{enumerate}
+	\item Exception: se usa para las excepciones que deberán capturar los programas de usuario.  
+	\item II) Error: Excepciones que no se suelen capturar en condiciones normales. Suelen ser fallos catastróficos no gestionados por los programas, como el desbordamiento de una pila. 
+\end{enumerate}
+\section{Excepciones definidas por el programador}
+\begin{enumerate}
+	\item RuntimeException: representa excepciones definidas automáticamente por los programas (división por 0, índice inválido de matriz, etc).
+	\item ClassNotFoundException
+	\item InterruptedException
+	\item CloneNotSuppoertedException
+	\item IllegalAccesException
+	\item NoSuchMethodException
+\end{enumerate}
+\chapter{Objeto persistente}
+La persistencia es la acción de mantener la información del objeto de una forma permanente (guardarla), pero también debe de poder recuperarse dicha información para que pueda ser utilizada nuevamente. \\
+Para la persistencia los objetos podrían clasificarse en dos tipos:
+\begin{enumerate}
+	\item Objetos transitorios: son aquellos que su tiempo de vida depende del espacio del proceso que lo creo.
+	\item Persistentes: son aquellos que su estado es almacenado en un medio temporal para su posterior reconstrucción y utilización, por lo cual el objeto no depende del proceso que lo creo. 
+\end{enumerate}
+\chapter{Entornos para ejecutar código}
+\section{Netbeans}
+Es un programa que sirve como IDE (un entorno de desarrollo integrado) que nos permite programar en diversos lenguajes. \\
+Ventajas:
+\begin{enumerate}
+	\item Lenguaje multiplataforma
+	\item Manejo automático de la memoria
+	\item Desarrolla aplicaciones web dinámicas
+	\item Es gratuito
+\end{enumerate}
+Desventajas:
+\begin{enumerate}
+	\item Lentitud al ejecutar aplicaciones
+	\item Requiere un intérprete
+	\item Algunas implementaciones y librerías pueden tener código rebuscado.
+	\item Algunas herramientas tienen un costo adicional. 
+\end{enumerate}
+\section{Jupyter}
+Jupyter Notebook es un entorno de trabajo interactivo que permite desarrollar código en Python, por defecto, de manera dinámica, a la vez que integrar en un mismo documento tanto bloques de código como texto, gráficas o imágenes. \\Ventajas:
+\begin{enumerate}
+	\item Permite replicar resultados de una forma sencilla
+	\item Puedes exportar los resultados a HTML y PDF de forma inmediata.
+	\item Las variables quedan almacenadas en memoria para poder inspeccionar y corregir el código fácilmente. 
+\end{enumerate}
+Desventajas:
+\begin{enumerate}
+	\item No es compatible con Git
+	\item No sirve en el desarrollo de librerías o de software serio. 
+	\item Los Notebook pueden llegar a ser muy largos. 
+\end{enumerate}
+\section{Emacs}
+Emacs es un editor de texto con una gran cantidad de funciones, es uno de los editores de texto más potentes de Unix-Linux.\\
+Ventajas:
+\begin{enumerate}
+	\item Su velocidad
+	\item La gran cantidad de paquetes que contiene
+	\item Funciona tanto en modo texto como en modo gráfico
+	\item Es gratuito
+	\item Instalación fácil
+\end{enumerate}
+Desventajas:
+\begin{enumerate}
+	\item Son muchas combinaciones de teclas 
+	\item Curva de aprendizaje amplia
+\end{enumerate}
+\end{document}

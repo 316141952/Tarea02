@@ -1,0 +1,23 @@
+\select@language {spanish}
+\contentsline {chapter}{\numberline {1}\relax \fontsize {12}{14}\selectfont Conceptos}{5}{chapter.1}
+\contentsline {section}{\numberline {1.1}TDA}{5}{section.1.1}
+\contentsline {section}{\numberline {1.2}Interfaz}{5}{section.1.2}
+\contentsline {section}{\numberline {1.3}Clase abstracta}{5}{section.1.3}
+\contentsline {section}{\numberline {1.4}Herencia}{6}{section.1.4}
+\contentsline {section}{\numberline {1.5}Superclase}{6}{section.1.5}
+\contentsline {section}{\numberline {1.6}Encapsulamiento}{6}{section.1.6}
+\contentsline {section}{\numberline {1.7}Visibilidad}{7}{section.1.7}
+\contentsline {section}{\numberline {1.8}Estructura de datos }{7}{section.1.8}
+\contentsline {chapter}{\numberline {2}Errores}{9}{chapter.2}
+\contentsline {section}{\numberline {2.1}Errores de Sintaxis}{9}{section.2.1}
+\contentsline {section}{\numberline {2.2}Errores de Ejecuci\IeC {\'o}n}{9}{section.2.2}
+\contentsline {section}{\numberline {2.3}Errores L\IeC {\'o}gicos}{10}{section.2.3}
+\contentsline {chapter}{\numberline {3}Excepciones}{11}{chapter.3}
+\contentsline {section}{\numberline {3.1}\IeC {\textquestiondown }Qu\IeC {\'e} es una excepci\IeC {\'o}n?}{11}{section.3.1}
+\contentsline {section}{\numberline {3.2}Jerarqu\IeC {\'\i }a}{11}{section.3.2}
+\contentsline {section}{\numberline {3.3}Excepciones definidas por el programador}{11}{section.3.3}
+\contentsline {chapter}{\numberline {4}Objeto persistente}{13}{chapter.4}
+\contentsline {chapter}{\numberline {5}Entornos para ejecutar c\IeC {\'o}digo}{15}{chapter.5}
+\contentsline {section}{\numberline {5.1}Netbeans}{15}{section.5.1}
+\contentsline {section}{\numberline {5.2}Jupyter}{15}{section.5.2}
+\contentsline {section}{\numberline {5.3}Emacs}{16}{section.5.3}
